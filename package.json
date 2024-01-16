@@ -7,7 +7,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel bulid"
+    "build": "parcel build"
   },
   "devDependencies": {
     "parcel": "^2.11.0",
