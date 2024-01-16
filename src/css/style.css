@@ -79,7 +79,7 @@ nav li:hover {
   display: flex;
   align-items: center;
   padding: 8px 15px;
-  background-color: rgb(127, 177, 87);
+  background-color: rgb(87, 177, 163);
   cursor: pointer;
   margin-right: 2px;
 }
@@ -89,7 +89,7 @@ nav li:hover {
 }
 
 .menu-btn:hover {
-  background-color: rgb(145, 200, 100);
+  background-color: rgb(107, 215, 199);
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
   border-radius: 50px;
   transition: ease-in 0.3s;
@@ -170,7 +170,7 @@ nav li:hover {
 /*Styling startsida*/
 
 .rubrik {
-  margin-top: 2%;
+  padding-top: 2%;
   font-size: 2.5em;
   text-align: center;
 }
@@ -180,6 +180,7 @@ nav li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 70vh;
 }
 
 .omuppgdiv p {
@@ -223,4 +224,9 @@ picture img {
 
 h2 {
   text-align: center;
+}
+
+main {
+  background: rgb(107,164,66);
+  background: linear-gradient(0deg, rgba(107,164,66,1) 0%, rgba(112,203,180,1) 100%);
 }
