@@ -1,0 +1,15 @@
+{
+  "name": "moment1",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel bulid"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
