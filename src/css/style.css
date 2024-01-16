@@ -195,6 +195,7 @@ nav li:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-bottom: 5%;
 }
 
 picture img {
@@ -213,6 +214,7 @@ picture img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5%;
 }
 
 .pub-container p {
