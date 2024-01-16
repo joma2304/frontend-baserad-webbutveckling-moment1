@@ -1,195 +1,226 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
-  }
-  
-  /* Design av Header */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Design av Header */
+header {
+  height: 100px;
+  background-color: rgb(87, 177, 163);
+  margin: 0;
+  position: relative;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+}
+
+/* Design av meny för mobil*/
+nav {
+  background-color: rgb(87, 177, 163);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
+  font-size: 1.4em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 60%;
+  display: none;
+  z-index: 999;
+}
+
+nav ul {
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+nav li {
+  padding: 0.8em 0;
+  width: 100%;
+}
+
+nav #txt {
+  color: blue;
+}
+
+nav #txt:hover {
+  border: none;
+  cursor: auto;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 0 1em;
+}
+
+nav li:hover {
+  border: solid white 10px;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.active {
+  color: white;
+}
+
+/* Meny knapp, öppna meny */
+.menu-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: rgb(127, 177, 87);
+  cursor: pointer;
+  margin-right: 2px;
+}
+
+.open {
+  margin: 0 1em;
+}
+
+.menu-btn:hover {
+  background-color: rgb(145, 200, 100);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
+  border-radius: 50px;
+  transition: ease-in 0.3s;
+}
+
+
+/* de tre svarta strecken*/
+.bars {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 5px 0;
+}
+
+
+/* Meny knapp, stäng */
+.close {
+  margin: 1em 1.5em;
+  padding: 10px 15px;
+
+}
+
+/*Kryss */
+.cross1 {
+  width: 25px;
+  transform: rotate(45deg);
+  position: relative;
+  top: 5px;
+}
+
+.cross2 {
+  width: 25px;
+  transform: rotate(135deg);
+  position: relative;
+  top: -3px;
+}
+
+/* Media querys */
+
+/* Större skärmas - gör menyn som inline */
+@media only screen and (min-width: 992px) {
   header {
-    height: 100px;
-    background-color: rgb(87, 177, 163);
-    margin: 0;
-    position: relative;
-    padding: 0 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 3em;
   }
-  
-  .logo {
-    width: 150px;
-  }
-  
-  /* Design av meny för mobilenheter, placeras till höger om skärmen */
-  nav {
-    background-color: rgb(87, 177, 163);
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
-    font-size: 1.4em;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 60%;
-    display: none;
-    z-index: 999;
-  }
-  
-  nav ul {
-    width: 100%;
-    list-style-type: none;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
-  nav li {
-    padding: 0.8em 0;
-    width: 100%;
-  }
-  
-  nav a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    padding: 0 1em;
-  }
-  
-  nav li:hover {
-    border: solid white 10px;
-    border-radius: 99px;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-  }
-  
-  .active {
-    color: white;
-  }
-  
-  /* Meny knapp, öppna meny */
+
   .menu-btn {
-    display: flex;
-    align-items: center;
-    padding: 8px 15px;
-    background-color: rgb(127, 177, 87);
-    cursor: pointer;
-    margin-right: 2px;
+    display: none;
   }
-  
-  .open {
-    margin: 0 1em;
+
+  #open-menu {
+    display: none !important;
   }
-  
-  .menu-btn:hover {
-    background-color: rgb(145, 200, 100);
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
-    border-radius: 50px;
-    transition: ease-in 0.3s;
+
+  header {
+    position: static;
   }
-  
-  
-  /* de tre svarta strecken (hamburg-icon) */
-  .bars {
-    display: block;
-    width: 20px;
-    height: 3px;
-    background-color: rgb(0, 0, 0);
-    margin: 5px 0;
+
+  nav {
+    display: block !important;
+    position: static;
+    box-shadow: 0 0px 0px;
+    height: auto;
+    font-size: 1.4em;
+    width: auto;
   }
-  
-  
-  /* Meny knapp, stäng */
-  .close {
-    margin: 1em 1.5em;
-    padding: 10px 15px;
-  
+
+  nav ul {
+    height: 100%;
   }
-  
-  /* Roterar två lodräda streck, till ett kryss */
-  .cross1 {
-    width: 25px;
-    transform: rotate(45deg);
-    position: relative;
-    top: 5px;
+
+  nav li {
+    display: inline;
+    padding: 1.2em 0;
   }
-  
-  .cross2 {
-    width: 25px;
-    transform: rotate(135deg);
-    position: relative;
-    top: -3px;
-  }
-  
-  /* Media querys */
-  
-  /* Större skärmas - gör menyn som inline */
-  @media only screen and (min-width: 992px) {
-    header {
-      padding: 0 3em;
-    }
-  
-    .menu-btn {
-      display: none;
-    }
-  
-    #open-menu {
-      display: none !important;
-    }
-  
-    header {
-      position: static;
-    }
-  
-    nav {
-      display: block !important;
-      position: static;
-      box-shadow: 0 0px 0px;
-      height: auto;
-      font-size: 1.4em;
-      width: auto;
-    }
-  
-    nav ul {
-      height: 100%;
-    }
-  
-    nav li {
-      display: inline;
-      padding: 1.2em 0;
-    }
-  }
-  
-  /*Styling startsida*/
-  
-  .rubrik {
-    margin-top: 2%;
-    font-size: 2.5em;
-    text-align: center;
-  }
-  
-  .omuppgdiv {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .omuppg {
-    width: 80%;
-    max-width: 800px;
-    text-align: left;
-    font-size: 1.2em;
-  }
-  
-  .images {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  picture img {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2%;
-    width: 90%;
-    border-radius: 99px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
-  }
+}
+
+/*Styling startsida*/
+
+.rubrik {
+  margin-top: 2%;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.omuppgdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.omuppgdiv p {
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+picture img {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  width: 90%;
+  border-radius: 99px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
+}
+
+/*Publiceringssida*/
+
+.pub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pub-container p {
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+h2 {
+  text-align: center;
+}

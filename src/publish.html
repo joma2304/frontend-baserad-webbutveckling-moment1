@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Startsida</title>
     <script src="js/main.js" type="module"></script>
 </head>
@@ -36,13 +36,32 @@
                 <li><a href="index.html">Startsida</a></li>
                 <li><a href="images.html">Bilder</a></li>
                 <li><a href="publish.html" class="active">Publicering</a></li>
+                <li id="txt"></li>
             </ul>
         </nav>
     </header>
     <main>
         <div>
             <h1 class="rubrik">Publicering av uppgiften</h1>
-
+            <div class="pub-container">
+                <h2>Start</h2>
+                <p>Jag började med att skapa en mapp som jag döpte till moment1. Jag öppnade denna i VS code och öppnade
+                    terminalen i mapp-roten. I den skrev jag npm init för att, npm är en pakethanterare som hanterar
+                    tillägg till nodeJS. Efter detta så la jag till Parcel genom att skriva npm install parcel
+                    --save-dev. Anledninge till att jag skrev --save-dev är för att det endast skall användas under
+                    utvecklingen och inte till publiceringen. Parcel sköter även minifiering av filer och gör så att man kan optimera sina bilder i sin html-kod.</p><br>
+                <p>I package.json lägger jag till min källfil som är index.html, jag lägger även till scripts för start
+                    och build. Jag skapar även en ny mapp som heter src (source) och i den lägger jag min källfil
+                    (index.html) samt de anndra html, js, css och bildfilerna.</p>
+                <h2>Utveckling</h2>
+                <p>För att få en överblick översidans utseende under utvecklingsfasen så startar jag en liveserver genom
+                    att skriva npm start i terminalen. Sedan så skriver jag själva koden i VS code inom mappen src. Jag
+                    skapar även ett github repo som jag kopplar till mitt projekt. När jag blir färdig med en del av
+                    webbplatsen så trycker jag på stage all changes sedan på commit och till sist på push för att
+                    uppdatera mitt github repo. Jag lägger även till sharp.config.json i den anger jag att kvaliteten på bilderna ska vara 60%.</p>
+                <h2>Publicering</h2>
+                <p></p>
+            </div>
         </div>
     </main>
 </body>
