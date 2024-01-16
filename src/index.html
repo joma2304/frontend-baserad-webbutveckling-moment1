@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Startsida</title>
+    <script src="js/main.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"> <img src="images/logo.svg" alt="Logotyp" class="logo"></a>
+        <!-- Meny knapp för att öppna mobilmenyn-->
+        <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+        </button>
+        <!-- navigering -->
+        <nav id="nav-menu">
+            <!-- Knapp som visas om mobilmenyn är utfälld -->
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+            </button>
+            <ul>
+                <li><a href="index.html" class="active">Startsida</a></li>
+                <li><a href="images.html">Bilder</a></li>
+                <li><a href="publish.html">Publicering</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1 class="rubrik">Om uppgiften</h1>
+            <div class="omuppgdiv">
+            <p class="omuppg">Uppgiften går ut på att lära sig om nodeJS och hur det kan användas för att underlätta vid webbutveckling.
+                Uppgifter skall automatiseras. </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
