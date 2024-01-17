@@ -229,7 +229,6 @@ h2 {
 }
 
 main {
-  height: 100vh;
   background: rgb(107,164,66);
   background: linear-gradient(0deg, rgba(107,164,66,1) 0%, rgba(112,203,180,1) 100%);
 }
