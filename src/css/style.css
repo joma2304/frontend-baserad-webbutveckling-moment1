@@ -246,12 +246,13 @@ table {
 th {
   text-align: left;
   padding: 10px;
+  text-align: left;
 }
 
-tr {
-  text-align: left;
-  padding: 10px;
+td {
   font-weight: 400;
+  padding: 8px;
+  border: 1px solid #0d4558;
 }
 
 @media  (max-width: 700px) {

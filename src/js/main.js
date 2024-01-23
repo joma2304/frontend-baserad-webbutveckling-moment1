@@ -49,47 +49,28 @@ async function loadCourses() {
         const response = await fetch("https://dahlgren.miun.se/ramschema_ht23.php");
         const data = await response.json();
 
-        //Filtrera kurskod
-        const kursKod = data.filter(item => item.code);
-        //Filtrera kursnamn
-        const kursNamn = data.filter(item => item.coursename);
-        //Filtrera kursprogression
-        const kursProgression = data.filter(item => item.progression);
+        // Skapa en ny rad för varje kurs och lägg till i tabellen
+        data.forEach(item => {
+            const row = document.createElement("tr");
 
-        //Loopa och skriv ut kurskod
-        kursKod.forEach((item) => {
-            //Skapar ett nytt element
-            const kurskodElement = document.createElement("tr");
+            // Skapa celler för kurskod, kursnamn och kursprogression
+            const kursKodCell = document.createElement("td");
+            kursKodCell.textContent = item.code;
+            row.appendChild(kursKodCell);
 
-            // Lägg till kurskoden i det nya elementet
-            kurskodElement.innerHTML = item.code;
+            const kursNamnCell = document.createElement("td");
+            kursNamnCell.textContent = item.coursename;
+            row.appendChild(kursNamnCell);
 
-            document.getElementById("kurskod").appendChild(kurskodElement);
+            const kursProgressionCell = document.createElement("td");
+            kursProgressionCell.textContent = item.progression;
+            row.appendChild(kursProgressionCell);
+
+            // Lägg till raden i tabellens tbody
+            document.getElementById("table-body").appendChild(row);
         });
 
-        //Loopa och skriv ut kursnamn
-        kursNamn.forEach((item) => {
-            //Skapar ett nytt element
-            const kursNamnElement = document.createElement("tr");
-
-            // Lägg till kurskoden i det nya elementet
-            kursNamnElement.innerHTML = item.coursename;
-
-            document.getElementById("kursnamn").appendChild(kursNamnElement);
-        });
-
-        //Loopa och skriv ut kursprogression
-        kursProgression.forEach((item) => {
-            //Skapar ett nytt element
-            const kursProgressionElement = document.createElement("tr");
-
-            // Lägg till kurskoden i det nya elementet
-            kursProgressionElement.innerHTML = item.progression;
-
-            document.getElementById("kursprogression").appendChild(kursProgressionElement);
-        });
-
-        console.table(kursKod, kursNamn, kursProgression);
+        console.table(data);
 
     } catch (error) {
         console.error(error);
@@ -97,5 +78,6 @@ async function loadCourses() {
 }
 
 loadCourses();
+
 
 
