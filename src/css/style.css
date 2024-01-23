@@ -229,6 +229,33 @@ h2 {
 }
 
 main {
+  min-height: 100vh;
   background: rgb(107,164,66);
   background: linear-gradient(0deg, rgba(107,164,66,1) 0%, rgba(112,203,180,1) 100%);
+}
+
+.flex-container {
+display: flex;
+justify-content: center;
+}
+
+table {
+  font-size: 1.5em;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+}
+
+tr {
+  text-align: left;
+  padding: 10px;
+  font-weight: 400;
+}
+
+@media  (max-width: 700px) {
+  table {
+    font-size: 0.8em;
+  }
 }
